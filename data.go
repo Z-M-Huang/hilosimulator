@@ -34,7 +34,9 @@ type SimulationResult struct {
 
 	Won bool
 	//Bet `hi` or `lo` indicating bet high or low
-	Bet string
+	Bet       string
+	Odds      float64
+	WinChance float64
 
 	Profit float64
 	Stack  float64

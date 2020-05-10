@@ -42,7 +42,10 @@ func Simulate(config *Configuration) ([]*SimulationResult, error) {
 		if totalStack < baseBet {
 			break
 		}
-		simResult := &SimulationResult{}
+		simResult := &SimulationResult{
+			Odds:      odds,
+			WinChance: winChance,
+		}
 		profit := float64(0)
 		won := false
 		if config.RandomClientSeed {
