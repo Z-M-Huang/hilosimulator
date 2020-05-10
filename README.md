@@ -2,6 +2,7 @@
 Online bet game hi/low simulator
 
 # Example Usage
+## Simulate
 ```
   config := &hilowsimulator.Configuration{
 		TotalStack: 100000000,
@@ -25,4 +26,9 @@ Online bet game hi/low simulator
   if err != nil {
     panic(err)
   }
+```
+
+## Verify
+```
+  valid, err := hilowsimulator.Verify(result[0].ClientSeed, result[0].ServerSeed, result[0].Nonce, result[0].Roll)
 ```
