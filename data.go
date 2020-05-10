@@ -1,4 +1,4 @@
-package hilowsimulator
+package hilosimulator
 
 //Configuration simulation configuration
 type Configuration struct {

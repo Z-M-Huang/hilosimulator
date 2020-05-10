@@ -1,4 +1,4 @@
-package hilowsimulator
+package hilosimulator
 
 import (
 	"encoding/hex"

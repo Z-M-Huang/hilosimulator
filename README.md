@@ -4,16 +4,16 @@ Online bet game hi/low simulator
 # Example Usage
 ## Simulate
 ```
-  config := &hilowsimulator.Configuration{
+  config := &hilosimulator.Configuration{
 		TotalStack: 100000000,
 		Odds:       2,
 		WinChance:  47.5,
 		BaseBet:    100,
 		RollAmount: 100,
-		OnWin: &hilowsimulator.ConditionalChangeConfiguration{
+		OnWin: &hilosimulator.ConditionalChangeConfiguration{
 			ReturnToBaseBet: true,
 		},
-		OnLoss: &hilowsimulator.ConditionalChangeConfiguration{
+		OnLoss: &hilosimulator.ConditionalChangeConfiguration{
 			ReturnToBaseBet: false,
 			IncreaseBet:     true,
 			IncreaseBetBy:   1,
@@ -22,7 +22,7 @@ Online bet game hi/low simulator
 		AlternateHiLo:    true,
 	}
 
-	result, err := Simulate(config)
+	result, err := hilosimulator.Simulate(config)
   if err != nil {
     panic(err)
   }
@@ -30,5 +30,5 @@ Online bet game hi/low simulator
 
 ## Verify
 ```
-  valid, err := hilowsimulator.Verify(result[0].ClientSeed, result[0].ServerSeed, result[0].Nonce, result[0].Roll)
+  valid, err := hilosimulator.Verify(result[0].ClientSeed, result[0].ServerSeed, result[0].Nonce, result[0].Roll)
 ```
